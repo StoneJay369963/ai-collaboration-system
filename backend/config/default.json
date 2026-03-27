@@ -1,0 +1,115 @@
+{
+  "server": {
+    "port": 4000,
+    "host": "0.0.0.0",
+    "corsOrigin": "*",
+    "maxRequestBodySize": "10mb"
+  },
+  
+  "websocket": {
+    "port": 8080,
+    "pingInterval": 25000,
+    "pingTimeout": 60000,
+    "maxConnections": 1000
+  },
+  
+  "collaboration": {
+    "maxSessions": 100,
+    "maxAgentsPerSession": 10,
+    "taskTimeout": 1800000,
+    "sessionInactiveTimeout": 3600000
+  },
+  
+  "taskOrchestrator": {
+    "maxConcurrentTasks": 50,
+    "defaultTaskTimeout": 1800000,
+    "retryAttempts": 3,
+    "loadBalancing": true,
+    "predictiveScheduling": true
+  },
+  
+  "database": {
+    "type": "sqlite",
+    "path": "./data/collaboration.db",
+    "migrationsPath": "./migrations"
+  },
+  
+  "storage": {
+    "uploadPath": "./uploads",
+    "maxFileSize": 10485760,
+    "allowedTypes": [
+      "image/jpeg",
+      "image/png",
+      "image/gif",
+      "application/pdf",
+      "text/plain",
+      "text/markdown",
+      "application/json",
+      "application/javascript"
+    ]
+  },
+  
+  "security": {
+    "jwtSecret": "change-this-in-production",
+    "jwtExpiresIn": "7d",
+    "bcryptSaltRounds": 10,
+    "rateLimitWindow": 900000,
+    "rateLimitMax": 100
+  },
+  
+  "logging": {
+    "level": "info",
+    "filePath": "./logs",
+    "maxSize": 10485760,
+    "maxFiles": 30,
+    "format": "json"
+  },
+  
+  "aiAgents": {
+    "defaultAgents": [
+      {
+        "id": "fullstack-ai",
+        "name": "全栈开发者AI",
+        "type": "developer",
+        "capabilities": ["javascript", "typescript", "react", "nodejs", "database"]
+      },
+      {
+        "id": "ml-ai",
+        "name": "机器学习AI",
+        "type": "ml_engineer",
+        "capabilities": ["python", "tensorflow", "pytorch", "data_analysis"]
+      },
+      {
+        "id": "devops-ai",
+        "name": "运维AI",
+        "type": "devops",
+        "capabilities": ["docker", "kubernetes", "deployment", "monitoring"]
+      },
+      {
+        "id": "qa-ai",
+        "name": "质量保证AI",
+        "type": "qa",
+        "capabilities": ["testing", "code_review", "security", "performance"]
+      }
+    ],
+    "maxConcurrentTasksPerAgent": 3,
+    "agentHeartbeatInterval": 30000
+  },
+  
+  "knowledgeBase": {
+    "maxEntries": 10000,
+    "autoSummarize": true,
+    "searchLimit": 50
+  },
+  
+  "monitoring": {
+    "enabled": true,
+    "port": 9090,
+    "collectInterval": 15000,
+    "alertThresholds": {
+      "memoryUsage": 80,
+      "cpuUsage": 70,
+      "taskQueueLength": 100
+    }
+  }
+}
