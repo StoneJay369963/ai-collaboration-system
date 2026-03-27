@@ -27,6 +27,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Core dumps
+core.*
+
 # OS
 .DS_Store
 Thumbs.db
@@ -41,7 +44,6 @@ temp/
 *.tmp
 
 # Backend
-*.env
 venv/
 __pycache__/
 *.pyc
