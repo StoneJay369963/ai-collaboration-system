@@ -65,8 +65,8 @@ class TaskOrchestrator extends EventEmitter {
     // 定期检查可执行任务
     this.schedulerInterval = setInterval(() => {
       this.processReadyQueue();
-      this.checkTimeouts();
-      this.updateMetrics();
+      this.checkTimeouts?.();
+      this.updateMetrics?.();
     }, 5000); // 每5秒检查一次
     
     // 定期清理
