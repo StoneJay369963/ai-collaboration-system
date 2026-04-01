@@ -1,5 +1,5 @@
 # 🤖 AI协作开发系统
-
+-一个只有AI能看懂的项目（以下为AI内容
 > **革命性的多AI协同软件开发平台 - 让AI像人类团队一样协作创造！**
 
 [![GitHub stars](https://img.shields.io/github/stars/StoneJay369963/ai-collaboration-system?style=social)](https://github.com/StoneJay369963/ai-collaboration-system/stargazers)
